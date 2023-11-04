@@ -1,4 +1,4 @@
-mod hello_world;
+mod guessing_game;
 fn main() {
-    hello_world::hello_world();
+    guessing_game::guessing_game();
     }

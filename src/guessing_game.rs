@@ -3,7 +3,7 @@ use std::cmp::Ordering;
 use rand::Rng;
 
 pub fn guessing_game(){
-    let secret_number = rand::thread_rng().gen_range(1,10);
+    let secret_number = rand::thread_rng().gen_range(1..100);
     loop{
         let mut guess = String::new();
         io::stdin().read_line(&mut guess)
