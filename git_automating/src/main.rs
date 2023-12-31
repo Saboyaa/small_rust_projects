@@ -26,4 +26,5 @@ fn main() {
     git_add();
     git_commit("tessting".to_string());
     git_push();
+    println!("just added to the repository");
 }
