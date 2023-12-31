@@ -24,7 +24,7 @@ pub fn git_push() {
 
 fn main() {
     git_add();
-    git_commit("tessting".to_string());
+    git_commit("tessting".to_string());//this part is meant to be completed with chatgpt
     git_push();
     println!("Just added to the repository");
 }
