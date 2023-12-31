@@ -3,24 +3,21 @@ use std::process::{Command,Stdio};
 pub fn git_add() {
     Command::new("git")
         .args(["add","."])
-        .stdin(Stdio::null())
-        .spawn()
+        .output()
         .expect("Error in adding");
 }
 
 pub fn git_commit(text:String) {
     Command::new("git")
         .args(["commit","-m",&("\"".to_owned()+&text+"\"")])
-        .stdin(Stdio::null())
-        .spawn()
+        .output()
         .expect("Error in commiting");
 }
 
 pub fn git_push() {
     Command::new("git")
         .arg("push")
-        .stdin(Stdio::null())
-        .spawn()
+        .output()
         .expect("Error in pushing");
 }
 
