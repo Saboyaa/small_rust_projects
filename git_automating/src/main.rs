@@ -1,4 +1,4 @@
-use std::process::{Command,Stdio};
+use std::process::Command;
 
 pub fn git_add() {
     Command::new("git")
@@ -26,5 +26,5 @@ fn main() {
     git_add();
     git_commit("tessting".to_string());
     git_push();
-    println!("just added to the repository");
+    println!("Just added to the repository");
 }
