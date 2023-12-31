@@ -1,7 +1,7 @@
 use std::{thread, time};
 
 
-pub fn hello_world() {  
+fn main() {  
     let hello_world = "Hello World";
     let fifteen_millis = time::Duration::from_millis(15);
     println!("{:?}",hello_world.as_bytes());
