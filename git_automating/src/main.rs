@@ -1,8 +1,9 @@
-use std::process::Command;
+use std::process::{Command,Stdio};
 
 pub fn git_add() {
     Command::new("git")
         .args(["add","."])
+        .stdin(Stdio::null())
         .spawn()
         .expect("Error in adding");
 }
@@ -10,6 +11,7 @@ pub fn git_add() {
 pub fn git_commit(text:String) {
     Command::new("git")
         .args(["commit","-m",&("\"".to_owned()+&text+"\"")])
+        .stdin(Stdio::null())
         .spawn()
         .expect("Error in commiting");
 }
@@ -17,6 +19,7 @@ pub fn git_commit(text:String) {
 pub fn git_push() {
     Command::new("git")
         .arg("push")
+        .stdin(Stdio::null())
         .spawn()
         .expect("Error in pushing");
 }
